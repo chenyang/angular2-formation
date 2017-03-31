@@ -1,0 +1,10 @@
+<div>
+  <h3>User-list-container: interactions btw components</h3>
+
+  <app-user-form [buttonLabel]="'ADD_USER'" (onUserAdd)="addUser($event)">
+  </app-user-form>
+
+  <app-user-list-new [userList]="getUserList()" (onUserDelete)="deleteUser($event)">
+  </app-user-list-new>
+
+</div>

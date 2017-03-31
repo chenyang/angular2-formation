@@ -1,0 +1,11 @@
+
+<h3>this is new userList component</h3>
+<form>
+  <div *ngFor="let user of userList">
+
+    <span>{{ user.firstName }}</span>
+    <span>{{ user.lastName }}</span>
+
+    <button (click)="deleteUser(user)" type="button">REMOVE</button>
+  </div>
+</form>

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'This is root elm of app';
+
+  sayHi(){
+    alert(`HI ${this.title}`);
+  }
+
 }

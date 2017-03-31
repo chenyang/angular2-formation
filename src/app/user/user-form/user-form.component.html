@@ -1,0 +1,7 @@
+<form *ngIf="user" (ngSubmit)="addUser()" name="userform">
+
+    <input [(ngModel)]="user.firstName" name="firstName" type="text">
+    <input [(ngModel)]="user.lastName" name="lastName" type="text">
+    <button type="submit">{{ buttonLabel }}</button>
+
+</form>

@@ -1,0 +1,53 @@
+<div class="user-store-div">
+  <h4>Welcome to UserStore</h4>
+
+  <div>
+      <div>
+        <form name="userlist">
+          <div>
+            <label>input user: </label>
+          </div>
+          <div>
+            <label>firstName: <span style="color: red;">*</span> </label>
+            <input type="text" [(ngModel)]="currentUser.firstName" name="firstName">
+            <label>lastName: <span style="color: red;">*</span></label>
+            <input type="text" [(ngModel)]="currentUser.lastName" name="lastName">
+            <label>email: </label>
+            <input type="email" [(ngModel)]="currentUser.email" name="email">
+            <button (click)="addUser(currentUser)" type="button" [disabled]="!checkInput()">addUser</button>
+            <button (click)="reset()" type="button">reset</button>
+            <!--always set type of button. sometimes button is type of "reset" -->
+          </div>
+        </form>
+      </div>
+
+    <div>
+      <label>user list in user store</label>
+      <br/>
+       <div *ngFor="let user of getUserList(); let i=index">
+         [index:{{i}}]
+         firstName:{{user.firstName}}
+         lastName:{{user.lastName}}
+         email:{{user.email}}
+         <button (click)="removeUser(user)">delete</button>
+         <button (click)="edit(user)">edit</button>
+        </div>
+    </div>
+
+    <div>
+      <br/>
+      <span style="background-color: bisque">check</span>: total users: {{getUserList().length}}
+    </div>
+
+    <div>
+      <br/>
+      <button style="background-color: bisque" (click)="removeAll()">clean all</button>
+    </div>
+
+
+
+  </div>
+
+</div>
+
+

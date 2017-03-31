@@ -1,3 +1,18 @@
 <h1>
   {{title}}
+  <button (click)="sayHi()">click to say hi</button>
 </h1>
+
+  <div>
+    <h3>Old method: </h3>
+    <app-user-list-old>
+      Loading.. (while waiting)
+    </app-user-list-old>
+  </div>
+
+  <div>
+    <h3>new method:</h3>
+    <app-user-list-container></app-user-list-container>
+  </div>
+
+
